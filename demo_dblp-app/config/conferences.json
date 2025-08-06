@@ -1,0 +1,14 @@
+[
+    [
+        "SWAT",
+        "^SWAT$"
+    ],
+    [
+        "WADS",
+        "^WADS$"
+    ],
+    [
+        "WALCOM",
+        "^WALCOM$"
+    ]
+]
