@@ -2001,7 +2001,7 @@ long long write_tile(decompressor *geoms, std::atomic<long long> *geompos_in, ch
 
 				if (sf.t < 0) {
 					done_first_pass = true;
-					seq = 0;
+					seq = -1;
 					continue;
 				}
 				else {
@@ -2015,15 +2015,16 @@ long long write_tile(decompressor *geoms, std::atomic<long long> *geompos_in, ch
 					break;
 				}
 				sf = all_features[seq];
+				printf("%u          \n", seq);
 				// if (sf.priority != i) {
 				// 	continue;
 				// }
 				if (this_zoom_features[sf.id].dropped == FEATURE_DROPPED) {
 					continue;
 				}
-				if (clip_to_tile(sf, z, buffer)){
-					continue;
-				}
+				// if (sf.t == VT_POINT && clip_to_tile(sf, z, buffer)){
+				// 	continue;
+				// }
 			}
 
 
@@ -2313,7 +2314,7 @@ long long write_tile(decompressor *geoms, std::atomic<long long> *geompos_in, ch
 					still_need_simplification_after_reduction = true;  // reduction skipped, so always simplify
 				}
 			} else {
-				still_need_simplification_after_reduction = true;  // not a polygon, so simplify
+				// still_need_simplification_after_reduction = true;  // not a polygon, so simplify
 			}
 
 			// if (sf.t == VT_POLYGON || sf.t == VT_LINE) {
@@ -2412,9 +2413,9 @@ long long write_tile(decompressor *geoms, std::atomic<long long> *geompos_in, ch
 						sf.extra_detail = extra_detail;
 						// maximum allowed coordinate delta in geometries is 2^31 - 1
 						// so we need to stay under that, including the buffer
-						if (sf.extra_detail >= 30 - z) {
-							sf.extra_detail = 30 - z;
-						}
+						// if (sf.extra_detail >= 30 - z) {
+						// 	sf.extra_detail = 30 - z;
+						// }
 						tile_detail = sf.extra_detail;
 					}
 
