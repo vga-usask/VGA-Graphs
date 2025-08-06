@@ -2015,7 +2015,6 @@ long long write_tile(decompressor *geoms, std::atomic<long long> *geompos_in, ch
 					break;
 				}
 				sf = all_features[seq];
-				printf("%u          \n", seq);
 				// if (sf.priority != i) {
 				// 	continue;
 				// }
