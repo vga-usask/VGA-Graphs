@@ -46,7 +46,7 @@ All 1, 2, and 3
 
 ### Process Data and Generate the Dashboard
 
-Navigate to ./demo_dblp-app. The rest of the README will act as if ./demo_dblp-app is the root directory of the project.
+Navigate to ./demo_dblp-app. The rest of the README will assume ./demo_dblp-app is the root directory of the project.
 
 The [`./script/`](./script/) directory contains a set of scripts that is used
 for data processing and dashboard generation. In this directory, scripts are
