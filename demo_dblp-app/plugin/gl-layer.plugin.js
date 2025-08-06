@@ -108,7 +108,7 @@ export default class PluginGLLayer extends HTMLElement {
       const map = this.#layerInstance
         .getMaplibreMap();
       map.on("load", () => this.renderUI());
-      this.conferences?.forEach((_, i) => {
+      this.conferenceCombos?.forEach((_, i) => {
         map.on("click", `points_${i}`, async (e) => {
           const feature = e.features?.[0];
           const metadata = { ...feature.properties };
