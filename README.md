@@ -121,7 +121,7 @@ will create a graph where all nodes are kept at all levels. Any tippecanoe optio
 node script/5_generate-vector-tiles.js --cluster-distance=20
 ```
 
-The other two options are used in addition to --cluster-distance. The following command will create a graph identical to the command above but it will not drop the lines associated with dropped nodes:
+The other two options are used in addition to --cluster-distance. The following command will make a graph where all of the edges are visible at all zoom levels, but the nodes are still dropped the same as if --leave-lines was not present.
 ```sh
 
 node script/5_generate-vector-tiles.js --cluster-distance=20 --leave-lines
