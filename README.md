@@ -8,7 +8,7 @@ This project uses a modified version of Tippecanoe and demo_dblp-app to create a
 
 - [`NodeJS`](https://nodejs.org/) with version >= `22`.
 - [sqlite3] (https://www.npmjs.com/package/sqlite3)
-- [zlib] 
+- [zlib] (https://www.npmjs.com/package/zlib)
 ```sh
 sudo apt-get install sqlite3 libsqlite3-dev
 sudo apt install zlib1g-dev
@@ -18,12 +18,12 @@ sudo apt install zlib1g-dev
 
 The modified version of tippecanoe made for this project must be installed. To do so, navigate to the ./tippecanoe directory and run the following commands:
 ```sh
-make -j
+sudo make -j
 sudo make install
 ```
 Alternatively, navigate to ./demo_dblp-app and run:
 ```sh
-./automake.sh
+sudo ./automake.sh
 ```
 
 ### Configurations
